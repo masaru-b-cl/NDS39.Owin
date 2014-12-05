@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDS39.Owin.Web", "NDS39.Owin.Web\NDS39.Owin.Web.csproj", "{14A792C2-F0A9-43B4-B224-9105C52E75BB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NDS39.Owin.App", "NDS39.Owin.App\NDS39.Owin.App.csproj", "{39EAA5D3-458E-4C11-BFBE-F734F7394852}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{14A792C2-F0A9-43B4-B224-9105C52E75BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14A792C2-F0A9-43B4-B224-9105C52E75BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14A792C2-F0A9-43B4-B224-9105C52E75BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39EAA5D3-458E-4C11-BFBE-F734F7394852}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39EAA5D3-458E-4C11-BFBE-F734F7394852}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39EAA5D3-458E-4C11-BFBE-F734F7394852}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39EAA5D3-458E-4C11-BFBE-F734F7394852}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

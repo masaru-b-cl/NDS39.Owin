@@ -3,9 +3,7 @@ using Microsoft.Owin;
 
 using NDS39.Owin.Middleware;
 
-[assembly: OwinStartup(typeof(NDS39.Owin.Web.Startup))]
-
-namespace NDS39.Owin.Web
+namespace NDS39.Owin.App
 {
   public class Startup
   {
