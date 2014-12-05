@@ -1,8 +1,9 @@
-﻿using System;
-using System.Threading.Tasks;
-using Microsoft.Owin;
+﻿using System.Diagnostics;
+
 using Owin;
-using System.Diagnostics;
+using Microsoft.Owin;
+
+using NDS39.Owin.Middleware;
 
 [assembly: OwinStartup(typeof(NDS39.Owin.Web.Startup))]
 
@@ -12,12 +13,7 @@ namespace NDS39.Owin.Web
   {
     public void Configuration(IAppBuilder app)
     {
-      app.Use(async (context, next) =>
-        {
-          Debug.WriteLine("@@@ start middleware @@@");
-          await next();
-          Debug.WriteLine("@@@ end middleware @@@");
-        });
+      app.Use<MinimalMiddleware>();
 
       app.Run(async context =>
         {
