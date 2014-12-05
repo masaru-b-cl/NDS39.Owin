@@ -1,6 +1,4 @@
-﻿using System.Diagnostics;
-
-using Owin;
+﻿using Owin;
 using Microsoft.Owin;
 
 using NDS39.Owin.Middleware;
@@ -13,16 +11,15 @@ namespace NDS39.Owin.Web
   {
     public void Configuration(IAppBuilder app)
     {
-      app.Use<MinimalMiddleware>();
+      // Basic authentication
+      app.UseAuthBasic((user, password) => user == password);
 
       app.Run(async context =>
         {
-          Debug.WriteLine("@@@ run core app @@@");
-
           var response = context.Response;
           response.StatusCode = 200;
           response.ContentType = "text/plain";
-          await response.WriteAsync("Hello world");
+          await response.WriteAsync(string.Format("Hello {0}", context.Request.User.Identity.Name));
         });
     }
   }
